@@ -5,6 +5,13 @@
 	invalidinput:	.asciiz "Invalid bsse-27 number"
 
 .text
+
+error_empty_input:
+	la $a0, emptyinput
+	li $v0, 4
+	syscall
+	j exit
+
 	main:
 	
 	la $a0, myWord #stores myWord into a0
