@@ -1,3 +1,9 @@
+.data
+	userinput:	.space 512
+	emptyinput:	.asciiz "Input is empty"
+	longinput:	.asciiz "Input is too long"
+	invalidinput:	.asciiz "Invalid bsse-27 number"
+
 .text
 	main:
 	
