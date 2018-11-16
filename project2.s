@@ -17,5 +17,11 @@
 	add $s0, $t0, 27 #gets the base N and stores into s0
 	syscall
 
+	sub $s1, $s0, 10 #gets M and stores in $s1
+	syscall
+
+	#converting to base 27
+	
+
 .data
 myWord: space 4
