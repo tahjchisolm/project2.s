@@ -56,6 +56,12 @@ first char:
 	addi $a0, $a0, 1
 	j left_pad
 
+input_length:
+	addi $t0, $t0, 0
+	addi $t1, $t1, 10
+	add $t4, $t4, $a0
+
+
 first_digit:
 	li $s6, 35937
 	mult $s4, $s6
