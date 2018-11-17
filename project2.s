@@ -54,7 +54,7 @@ first_digit:
 	addi $a0, $a0, 1
 	j base_convert_input	
 
-second digit:
+second_digit:
 	li $s6, 1089
 	mult $s4, $s6
 	mflo $s7
@@ -63,7 +63,11 @@ second digit:
 	addi $a0, $a0, 1
 	j base_convert_input
 
-
+third_digit:
+	li $s6, 27
+	mult $s4, $s6
+	mflo $s7
+	add $t7, $t7, $s7
 
 .data
 myWord: space 4
