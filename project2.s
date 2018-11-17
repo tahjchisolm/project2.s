@@ -12,7 +12,19 @@ error_empty_input:
 	syscall
 	j exit
 
-	main:
+error_long_input:
+	la $a0, invalidinput
+	li $v0, 4
+	syscall
+	j exit
+
+error_invalid_input:
+	la $a0, longinput
+	li $v0, 4
+	syscall
+	j exit
+	
+main:
 	
 	la $a0, myWord #stores myWord into a0
 	li $a1, 5 #string has max of 5 characters
