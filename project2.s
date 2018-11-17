@@ -45,6 +45,11 @@ main:
 	sub $s1, $s0, 10 #gets M and stores in $s1
 	syscall
 
+left_pad:
+	li $t8, 32 
+	lb $t9, 0($a0)
+	beq $t8, $t9, first_char
+
 first_digit:
 	li $s6, 35937
 	mult $s4, $s6
