@@ -25,25 +25,7 @@ error_invalid_input:
 	j exit
 	
 main:
-	
-	la $a0, myWord #stores myWord into a0
-	li $a1, 5 #string has max of 5 characters
-	syscall
 
-	li $v0, 8 #gets the input
-	syscall
-
-
-	li $v0, 10
-	syscall
-
-	div $a0, 10 #gets the last number of the string
-	mfhi $t0
-	add $s0, $t0, 27 #gets the base N and stores into s0
-	syscall
-
-	sub $s1, $s0, 10 #gets M and stores in $s1
-	syscall
 
 left_pad:
 	li $t8, 32 
@@ -73,7 +55,8 @@ length_found:
 	beqz $t0, error_empty_input
 	slti $t3, $t0, 5
 	beqz $t3, error_long_input
-
+	move $a0, $t4
+	
 
 first_digit:
 	li $s6, 35937
@@ -117,5 +100,4 @@ exit:
 	li $v0, 10
 	syscall
 
-.data
-myWord: space 4
+
