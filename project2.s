@@ -49,6 +49,9 @@ left_pad:
 	li $t8, 32 
 	lb $t9, 0($a0)
 	beq $t8, $t9, first_char
+	move $t9, $a0
+	j input_len
+
 
 first_digit:
 	li $s6, 35937
