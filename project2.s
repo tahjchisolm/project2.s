@@ -52,6 +52,9 @@ left_pad:
 	move $t9, $a0
 	j input_len
 
+first char:
+	addi $a0, $a0, 1
+	j left_pad
 
 first_digit:
 	li $s6, 35937
