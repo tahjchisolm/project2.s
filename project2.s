@@ -65,6 +65,9 @@ find_length:
 	lb $t2, 0($a0)
 	beq $t2, length_found
 	beq $t2, $t1, length_found
+	addi $a0, $a0, 1
+	addi $t0, $t0, 1
+	j find_length
 
 first_digit:
 	li $s6, 35937
