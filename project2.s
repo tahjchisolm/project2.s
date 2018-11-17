@@ -61,6 +61,10 @@ input_length:
 	addi $t1, $t1, 10
 	add $t4, $t4, $a0
 
+find_length:
+	lb $t2, 0($a0)
+	beq $t2, length_found
+	beq $t2, $t1, length_found
 
 first_digit:
 	li $s6, 35937
