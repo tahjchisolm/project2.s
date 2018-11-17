@@ -83,5 +83,9 @@ print:
 	move $a0, $t7
 	syscall
 
+exit:
+	li $v0, 10
+	syscall
+
 .data
 myWord: space 4
