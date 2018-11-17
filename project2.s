@@ -45,7 +45,11 @@ main:
 	sub $s1, $s0, 10 #gets M and stores in $s1
 	syscall
 
-	#converting to base 27
+first_digit:
+	li $s6, 35937
+	mult $s4, $s6
+	mflo $s7
+	add $t7, $t7, $s7
 	
 
 .data
