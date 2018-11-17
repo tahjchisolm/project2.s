@@ -69,6 +69,12 @@ find_length:
 	addi $t0, $t0, 1
 	j find_length
 
+length_found:
+	beqz $t0, error_empty_input
+	slti $t3, $t0, 5
+	beqz $t3, error_long_input
+
+
 first_digit:
 	li $s6, 35937
 	mult $s4, $s6
